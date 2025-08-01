@@ -18,8 +18,7 @@
 ## ⚙️ 使用说明
 
 1. **下载程序**
-    -  `git clone https://github.com/yourusername/uptime-kuma-clone.git` 
-    - 修改第一行的 GitHub username 为你的用户名
+    -  `git clone https://github.com/pprunbot/uptime-jk.git` 
 
 2. **部署方式**
     - 安装依赖 `npm install`
@@ -27,6 +26,11 @@
 
 3. **后台地址**
     - 访问 http://localhost:3000/
+
+4. **创建环境变量 .env**
+     - `WEBSITES_LIST=https://example.com,https://google.com
+USERNAME=admin
+PASSWORD=password` 
 
 ## 📝 注意事项
 - 如遇到问题，欢迎提交 Issue 反馈
