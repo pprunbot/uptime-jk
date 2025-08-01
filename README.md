@@ -37,5 +37,5 @@ PASSWORD=password`
 - **修改时请保留原作者信息**
 
 ## 📸 页面预览
-![主页截图](https://raw.githubusercontent.com/pprunbot/TU/refs/heads/main/20-7-2025_21563.jpeg)
-![后台截图](https://raw.githubusercontent.com/pprunbot/TU/refs/heads/main/20-7-2025_215742.jpeg)
+![主页截图](https://raw.githubusercontent.com/pprunbot/TU/refs/heads/main/1-8-2025_23593.jpeg)
+![登录截图](https://raw.githubusercontent.com/pprunbot/TU/refs/heads/main/2-8-2025_003.jpeg)
