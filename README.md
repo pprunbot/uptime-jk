@@ -2,12 +2,12 @@
 
 ## ✨ 项目功能
 
-- 🕵️‍♂️ Real-time website status monitoring
-- 🔐 Secure authentication with environment variables
-- 📊 Beautiful dashboard with status visualization
-- ⏰ Automatic checks every 10 minutes
-- ➕ Add new websites via web interface
-- 📱 Fully responsive design
+- 🕵️‍♂️ 实时网站状态监控  
+- 🔐 使用环境变量进行安全身份验证  
+- 📊 美观的状态可视化仪表板  
+- ⏰ 每 10 分钟自动检测一次  
+- ➕ 可通过网页界面添加新网站  
+- 📱 完全响应式设计
 
 ## 🚀 Quick Start
 
