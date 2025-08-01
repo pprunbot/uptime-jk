@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网站状态监控面板</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-brand">
+                <i class="fas fa-heartbeat"></i>
+                <span>网站状态监控</span>
+            </div>
+            <div class="navbar-menu">
+                <a href="#" class="navbar-link active">仪表板</a>
+                <a href="#" class="navbar-link">历史记录</a>
+                <a href="#" class="navbar-link">设置</a>
+                <a href="#" class="navbar-link">帮助</a>
+            </div>
+            <div class="user-info">
+                <div class="user-avatar">A</div>
+                <div>管理员</div>
+                <button class="logout-btn" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i> 登出
+                </button>
+            </div>
+        </div>
+        
+        <header>
+            <h1><i class="fas fa-heartbeat"></i> 网站状态监控面板</h1>
+            <p>实时监控您的网站状态 | 每10分钟自动检查 | 支持自定义描述</p>
+        </header>
+        
+        <div class="stats-container">
+            <div class="stat-card">
+                <h3><i class="fas fa-globe"></i> 监控网站总数</h3>
+                <div class="value" id="totalSites">0</div>
+            </div>
+            <div class="stat-card">
+                <h3><i class="fas fa-check-circle"></i> 正常运行</h3>
+                <div class="value" id="upSites">0</div>
+            </div>
+            <div class="stat-card">
+                <h3><i class="fas fa-exclamation-triangle"></i> 存在问题</h3>
+                <div class="value" id="downSites">0</div>
+            </div>
+            <div class="stat-card">
+                <h3><i class="fas fa-sync-alt"></i> 最后检查</h3>
+                <div class="value" id="lastCheck">刚刚</div>
+            </div>
+        </div>
+        
+        <div class="status-container">
+            <div class="status-header">
+                <h2><i class="fas fa-list"></i> 网站状态列表</h2>
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="搜索网站...">
+                </div>
+            </div>
+            
+            <div class="website-grid" id="websitesContainer">
+                <div class="loading-container">
+                    <div class="spinner"></div>
+                    <p>正在加载网站监控数据...</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="info-section">
+            <h2><i class="fas fa-info-circle"></i> 系统说明</h2>
+            <p>本监控系统从环境变量WEBSITES_LIST获取需要监控的网站列表，每10分钟自动检查一次网站状态。</p>
+            
+            <div class="instructions">
+                <h3><i class="fas fa-cog"></i> 如何设置监控网站</h3>
+                <ul>
+                    <li>在环境变量中设置WEBSITES_LIST，包含要监控的网站URL</li>
+                    <li>多个网站用逗号分隔</li>
+                    <li>URL必须以http://或https://开头</li>
+                    <li>示例：WEBSITES_LIST="https://example.com,https://google.com"</li>
+                </ul>
+                
+                <h3><i class="fas fa-user-shield"></i> 安全设置</h3>
+                <ul>
+                    <li>默认用户名：admin，密码：password</li>
+                    <li>建议通过环境变量设置新的用户名和密码</li>
+                    <li>设置示例：USERNAME=myuser, PASSWORD=mypassword</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>监控系统每10分钟自动检查一次网站状态 | 最后更新: <span id="lastUpdated">--:--:--</span></p>
+            <p>当前监控网站: <span id="currentSites">0</span> 个 | 版本 1.1.0</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
